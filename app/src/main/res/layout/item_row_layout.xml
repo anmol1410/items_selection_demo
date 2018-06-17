@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/spacing">
+
+        <ImageView
+            android:id="@+id/iv_msg_read_status_row_item"
+            android:layout_width="@dimen/dot_diameter"
+            android:layout_height="@dimen/dot_diameter"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:contentDescription="@string/ang_not_read"
+            android:src="@drawable/orange_circle_fill" />
+
+        <CheckBox
+            android:id="@+id/cb_row_item"
+            style="@style/checkBoxStyle"
+            tools:checked="false" />
+
+        <TextView
+            android:id="@+id/tv_msg_time_row_item"
+            style="@style/ItemSubHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            tools:ignore="RtlSymmetry"
+            tools:text="10:09 AM" />
+
+        <TextView
+            android:id="@+id/tv_friend_row_item"
+            style="@style/ItemHeadingStyle"
+            android:layout_toEndOf="@id/cb_row_item"
+            android:layout_toLeftOf="@id/tv_msg_time_row_item"
+            android:layout_toRightOf="@id/cb_row_item"
+            android:layout_toStartOf="@id/tv_msg_time_row_item"
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            tools:text="Friend Name" />
+
+        <TextView
+            android:id="@+id/tv_item_details"
+            style="@style/ItemSubHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tv_friend_row_item"
+            android:layout_toEndOf="@id/cb_row_item"
+            android:layout_toLeftOf="@id/tv_msg_time_row_item"
+            android:layout_toRightOf="@id/cb_row_item"
+            android:layout_toStartOf="@id/tv_msg_time_row_item"
+            tools:ignore="RtlSymmetry"
+            tools:text="10:09 AM Outgoing: 35 sec" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

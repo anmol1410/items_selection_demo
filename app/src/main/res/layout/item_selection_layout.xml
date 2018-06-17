@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_selection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/spacing"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_cancel_selection_mode"
+        style="@style/ButtonTextViewStyle"
+        android:text="@string/cancel" />
+
+    <TextView
+        android:id="@+id/tv_select_options"
+        style="@style/ButtonTextViewStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/select_all" />
+
+    <TextView
+        android:id="@+id/tv_selected_items_count"
+        android:layout_alignBottom="@id/tv_select_options"
+        android:layout_alignTop="@id/tv_select_options"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/tv_cancel_selection_mode"
+        android:layout_toLeftOf="@id/tv_select_options"
+        android:layout_toRightOf="@id/tv_cancel_selection_mode"
+        android:layout_toStartOf="@id/tv_select_options"
+        tools:text="1 item selected"
+        style="@style/smallTextViewStyle" />
+
+</RelativeLayout>

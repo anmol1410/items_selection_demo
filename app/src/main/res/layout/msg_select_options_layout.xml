@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_selection_delete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/spacing"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_mark_as_read_items"
+        style="@style/ButtonTextViewStyle"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:contentDescription="@string/delete_selected_items"
+        android:src="@drawable/ic_check"
+        app:layout_constraintEnd_toStartOf="@+id/iv_delete_selected_items"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mark_read_selected_item_msg"
+        style="@style/smallTextViewStyle"
+        android:layout_below="@id/iv_mark_as_read_items"
+        android:text="@string/mark_as_read"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_mark_as_read_items"
+        app:layout_constraintStart_toStartOf="@+id/iv_mark_as_read_items"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mark_as_read_items" />
+
+    <ImageView
+        android:id="@+id/iv_delete_selected_items"
+        style="@style/ButtonTextViewStyle"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:contentDescription="@string/mark_as_read"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mark_as_read_items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_mark_as_read_items"
+        app:layout_constraintTop_toTopOf="@+id/iv_mark_as_read_items" />
+
+    <TextView
+        style="@style/smallTextViewStyle"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mark_read_selected_item_msg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_delete_selected_items"
+        app:layout_constraintStart_toStartOf="@+id/iv_delete_selected_items"
+        app:layout_constraintTop_toTopOf="@+id/tv_mark_read_selected_item_msg" />
+
+</android.support.constraint.ConstraintLayout>
